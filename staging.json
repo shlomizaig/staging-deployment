@@ -1,0 +1,34 @@
+{
+  "Desc": "staging description",
+  "SchemaVersion": 1,
+  "ImageVersions": {
+    "management-service-bootstrap": {
+      "image": "orbsnetworkstaging/management-service:bootstrap",
+      "comment": "for use by a node deployment/installation tool"
+    },
+    "management-service": {
+      "image": "orbsnetworkstaging/management-service:v2.0.7-immediate"
+    },
+    "matic-reader": {
+      "image": "orbsnetworkstaging/management-service:v2.0.7-immediate"
+    },
+    "node": {
+      "image": "orbsnetworkstaging/node:v2.0.15"
+    },
+    "node-canary": {
+      "image": "orbsnetworkstaging/node:v2.0.15"
+    },
+    "signer": {
+      "image": "orbsnetworkstaging/signer:v2.3.0"
+    },
+    "ethereum-writer": {
+      "image": "orbsnetworkstaging/ethereum-writer:v1.3.11"
+    },
+    "matic-writer": {
+      "image": "orbsnetworkstaging/ethereum-writer:v1.3.11"
+    },
+    "logs-service": {
+      "image": "orbsnetworkstaging/logs-service:v1.1.4"
+    }
+  }
+}
