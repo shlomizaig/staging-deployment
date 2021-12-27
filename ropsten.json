@@ -1,0 +1,34 @@
+{
+  "Desc": "ropsten description",
+  "SchemaVersion": 1,
+  "ImageVersions": {
+    "management-service-bootstrap": {
+      "image": "orbsnetworkropsten/management-service:bootstrap",
+      "comment": "for use by a node deployment/installation tool"
+    },
+    "management-service": {
+      "image": "orbsnetworkropsten/management-service:v2.0.8-immediate"
+    },
+    "matic-reader": {
+      "image": "orbsnetworkropsten/management-service:v2.0.8-immediate"
+    },
+    "node": {
+      "image": "orbsnetworkropsten/node:v2.0.15"
+    },
+    "node-canary": {
+      "image": "orbsnetworkropsten/node:v2.0.15"
+    },
+    "signer": {
+      "image": "orbsnetworkropsten/signer:v2.3.0"
+    },
+    "ethereum-writer": {
+      "image": "orbsnetworkropsten/ethereum-writer:v1.3.11"
+    },
+    "matic-writer": {
+      "image": "orbsnetworkropsten/ethereum-writer:v1.3.11"
+    },
+    "logs-service": {
+      "image": "orbsnetworkropsten/logs-service:v1.1.4"
+    }
+  }
+}
