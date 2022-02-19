@@ -14,7 +14,7 @@
       "image": "orbsnetworkstaging/management-service:v2.0.8-immediate"
     },
     "keepers": {
-      "image": "orbsnetworkstaging/keepers:v1.0.65-immediate"
+      "image": "orbsnetworkstaging/keepers:v1.0.66-immediate"
     },
     "node": {
       "image": "orbsnetworkstaging/node:v2.0.15"
