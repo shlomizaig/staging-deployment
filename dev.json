@@ -12,7 +12,7 @@
     },
     "matic-reader": {
       "image": "orbsnetworkstaging/management-service:v2.1.0-immediate"
-    }
+    },
     "node": {
       "image": "orbsnetwork/node:v2.0.15"
     },
