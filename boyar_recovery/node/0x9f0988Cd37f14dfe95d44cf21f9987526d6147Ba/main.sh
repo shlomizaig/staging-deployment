@@ -4,11 +4,11 @@
  
 # Define bash shell variable called var 
 # Avoid spaces around the assignment operator (=)
-var="staging script11"
+var="staging script22"
  
 # Another way of printing it
 printf "%s\n" "$var"
 
 # create a file
 mkdir -p target_files
-touch target_files/script_file11.txt
+touch target_files/script_file22.txt
