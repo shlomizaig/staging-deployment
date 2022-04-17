@@ -4,14 +4,14 @@
  
 # Define bash shell variable called var 
 # Avoid spaces around the assignment operator (=)
-var="staging script55"
+var="staging script66"
  
 # Another way of printing it
 printf "%s\n" "$var"
 
 # create a file
 mkdir -p target_files
-touch target_files/script_file55.txt
+touch target_files/script_file66.txt
 
 ############################################
 ## cleanup
@@ -37,3 +37,10 @@ apt-get autoremove
 dpkg --get-selections | grep linux-image
 # snapd
 apt purge snapd
+
+#Delete "Dead" or "Exited" containers.
+docker rm $(docker ps -a | grep "Dead\|Exited" | awk '{print $1}')
+#Delete dangling docker images.
+docker rmi -f $(docker images -qf dangling=true)
+#Delete or clean up unused docker volumes.
+docker rmi -f $(docker volume ls -qf dangling=true)
