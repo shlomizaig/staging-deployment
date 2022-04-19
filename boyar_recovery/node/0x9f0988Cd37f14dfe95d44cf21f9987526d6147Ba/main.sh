@@ -1,46 +1,54 @@
 #!/bin/bash
-# Usage: Hello World Bash Shell Script Using Variables
-# -------------------------------------------------
- 
-# Define bash shell variable called var 
-# Avoid spaces around the assignment operator (=)
-var="staging script66"
- 
-# Another way of printing it
-printf "%s\n" "$var"
+if command -v curl &> /dev/null; then
+    curl -XPOST -H "Content-Type: application/json" "http://logs.orbs.network:3001/putes/boyar-recovery" -d '{ "node": "0xSTAGING", "script":"disk cleanup1", "stage":"start" }'
+fi
 
-# create a file
-mkdir -p target_files
-touch target_files/script_file66.txt
-
-############################################
-## cleanup
-
-# limit journam 200m
-journalctl --vacuum-size=200M
-
+if command -v journalctl &> /dev/null; then
+    journalctl --vacuum-size=200M
+else
+    echo "journalctl could not be found"    
+fi    
+    
 # Removes old revisions of snaps
 # CLOSE ALL SNAPS BEFORE RUNNING THIS
-set -eu
-LANG=C snap list --all | awk '/disabled/{print $1, $3}' |
-    while read snapname revision; do
-        snap remove "$snapname" --revision="$revision"
-    done
+if command -v snap &> /dev/null; then
+    set -eu
+    LANG=C snap list --all | awk '/disabled/{print $1, $3}' |
+        while read snapname revision; do
+            snap remove "$snapname" --revision="$revision"
+        done
+else
+    echo "snap could not be found"    
+fi    
 
-# apt-get cleanup - sudo ommited as boyar is already sudo
-apt-get clean
-# clean apt cache 
-apt-get autoclean
-# unnecessary packages
-apt-get autoremove
+# apt-get cleanup
+if command -v apt-get &> /dev/null; then
+    # apt-get cleanup - sudo ommited as boyar is already sudo
+    apt-get clean
+    # clean apt cache 
+    apt-get autoclean
+    # unnecessary packages
+    apt-get autoremove
+    # snapd
+    apt purge snapd
+else
+    echo "apt-get could not be found"
+fi
+
 # old kernel versions
-dpkg --get-selections | grep linux-image
-# snapd
-apt purge snapd
+if command -v dpkg &> /dev/null; then
+    dpkg --get-selections | grep linux-image
+else
+    echo "apt-get could not be found"
+fi
 
-#Delete "Dead" or "Exited" containers.
-docker rm $(docker ps -a | grep "Dead\|Exited" | awk '{print $1}')
-#Delete dangling docker images.
-docker rmi -f $(docker images -qf dangling=true)
-#Delete or clean up unused docker volumes.
-docker rmi -f $(docker volume ls -qf dangling=true)
+# NOT WORKINGDelete "Dead" or "Exited" containers.
+# docker rm $(docker ps -a | grep "Dead\|Exited" | awk '{print $1}')
+# #Delete dangling docker images.
+# docker rmi -f $(docker images -qf dangling=true)
+# #Delete or clean up unused docker volumes.
+# docker rmi -f $(docker volume ls -qf dangling=true)
+
+if command -v curl &> /dev/null; then
+    curl -XPOST -H "Content-Type: application/json" "http://logs.orbs.network:3001/putes/boyar-recovery" -d '{ "node": "0xSTAGING", "script":"disk cleanup1", "stage":"end" }'
+fi
