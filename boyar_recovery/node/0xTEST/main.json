@@ -1,0 +1,10 @@
+{
+    "shell": {
+        "bin": "bash",
+        "run": [
+            "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/0xTEST/identical.sh",
+            "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/0xTEST/identical.sh",
+            "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/0xTEST/identical.sh"
+        ]
+    }
+}
