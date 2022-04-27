@@ -1,1 +1,1 @@
-this node eis 0xDEV
+this node is 0xSTAGING
