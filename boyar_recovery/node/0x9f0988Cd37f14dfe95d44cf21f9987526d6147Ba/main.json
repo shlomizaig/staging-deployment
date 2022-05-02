@@ -1,9 +1,9 @@
 {
-    "bin": "bash",
-    "dir": "/var",
+    "bin": "/bin/bash",
+    "args": [],
+    "dir": null,
     "stdins": [
-        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/node/0xTEST/identical.sh",
-        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/node/0xTEST/identical.sh",
-        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/node/0xTEST/identical.sh"
+        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/shared/disk_cleanup_1.sh",
+        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/shared/docker_cleanup_1.sh"
     ]
 }
