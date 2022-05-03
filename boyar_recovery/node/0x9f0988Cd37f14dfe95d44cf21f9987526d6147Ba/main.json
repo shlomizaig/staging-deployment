@@ -1,0 +1,8 @@
+{
+    "bin": "/bin/bash",
+    "args": [],
+    "dir": null,
+    "stdins": [
+        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/shared/write_stderr.sh"
+    ]
+}
