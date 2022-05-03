@@ -3,6 +3,6 @@
     "args": [],
     "dir": null,
     "stdins": [
-        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/0xTEST/write_stderr.sh"
+        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/node/0xTEST/write_stderr.sh"
     ]
 }
