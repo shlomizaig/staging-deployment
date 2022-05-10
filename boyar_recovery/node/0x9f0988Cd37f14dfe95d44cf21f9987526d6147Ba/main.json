@@ -6,6 +6,6 @@
         "three"
     ],
     "stdins": [
-        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/node/0XTEST/args.sh"
+        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/node/0xTEST/args.sh"
     ]
 }
