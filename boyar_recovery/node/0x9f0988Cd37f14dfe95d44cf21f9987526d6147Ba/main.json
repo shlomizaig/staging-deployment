@@ -1,6 +1,11 @@
 {
     "bin": "bash",
+    "args": [
+        "one",
+        "two",
+        "three"
+    ],
     "stdins": [
-        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/shared/docker_cleanup_1.sh"
+        "https://raw.githubusercontent.com/amihaz/staging-deployment/main/boyar_recovery/OXTEST/args.sh"
     ]
 }
